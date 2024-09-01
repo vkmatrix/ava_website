@@ -1,0 +1,180 @@
+@import url('https://fonts.googleapis.com/css2?family=DM+Serif+Display:ital@0;1&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=DM+Serif+Display:ital@0;1&display=swap');
+html, body {
+    height: 100%;
+    margin: 0;
+    font-family: Arial, sans-serif;
+    background: #c0ecff;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    color: #000;
+}
+
+/* Header Bar Styles */
+.header-bar {
+    position: relative;
+    top: 20px;
+    left: 50%;
+    transform: translateX(-50%);
+    background: rgba(255, 255, 255, 1);
+    backdrop-filter: blur(8px);
+    padding: 10px 20px;
+    z-index: 1000;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.18);
+    border-radius: 40px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 70%;
+    max-width: 1200px;
+    box-sizing: border-box;
+    box-shadow: 0 8px 8px rgba(8, 53, 255, 0.889); /* Subtle shadow for depth */
+    margin-bottom: 50px; /* Added margin to increase space */
+}
+
+/* Logo Styles */
+.logo {
+    font-size: 1.7rem;
+    font-weight: bold;
+    color: #00f;
+    display: flex;
+    align-items: center;
+    font-family: "Playfair Display", serif;
+}
+
+.favicon {
+    width: 32px;
+    height: 32px;
+    margin-right: 10px;
+    vertical-align: middle;
+}
+
+/* Navigation Links Styles */
+.nav-links {
+    display: flex;
+    gap: 15px;
+    flex-wrap: wrap;
+    font-family: "DM Serif Display", serif;
+}
+
+.nav-link {
+    color: #000;
+    font-weight: bold;
+    text-decoration: none;
+    font-size: 1.25rem;
+    position: relative;
+    padding: 8px 16px;
+    border-radius: 20px;
+    transition: all 0.1s ease;
+}
+
+.nav-link:hover {
+    color: #00f;
+    background-color: rgb(255, 255, 255);
+    border: 2px solid #00f;
+    box-shadow: 0 4px 8px rgba(0, 0, 255, 0.5);
+}
+
+/* Curved Box for the form */
+.curved-box {
+    background-color: #ffffff;
+    border-radius: 50px; /* Increased curvature */
+    box-shadow: 0 8px 8px rgba(8, 53, 255, 0.889); /* Matching header shadow */
+    max-width: 500px;
+    padding: 30px;
+    margin: 100px auto 40px; /* Adjusted margin to increase gap between header and main box and decrease after main box */
+}
+
+/* Check Heading Styles */
+.check-heading {
+    font-family: "DM Serif Display", serif;
+    font-weight: bold;
+}
+
+/* Input styles */
+#patientId {
+    border-radius: 30px;
+    height: 45px;
+}
+
+/* Button styles */
+.btn-primary {
+    background-color: rgba(8, 53, 255, 0.889); /* Button color matching header shadow */
+    border: none;
+    border-radius: 40px;
+    height: 45px;
+    font-size: 16px;
+    color: #fff; /* Button text color */
+    font-family: "DM Serif Display", serif;
+}
+
+.btn-primary:hover {
+    background-color: #003366; /* Darker shade on hover */
+}
+
+/* Curved Text Box for displaying results */
+.result-box {
+    background-color: #f8f9fa;
+    border-radius: 15px;
+    padding: 20px;
+    min-height: 80px;
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.05);
+    text-align: center;
+    color: #555;
+}
+
+/* Responsive styles */
+@media (max-width: 768px) {
+    .header-bar {
+        width: 85%;
+        padding: 8px 16px;
+        flex-direction: column;
+        align-items: flex-start;
+        text-align: center;
+    }
+
+    .curved-box {
+        padding: 20px;
+    }
+
+    .btn-primary {
+        height: 40px;
+    }
+
+    #patientId {
+        height: 40px;
+    }
+
+    .nav-link {
+        font-size: 0.9rem;
+        padding: 6px 12px;
+    }
+}
+
+@media (max-width: 576px) {
+    .logo {
+        font-size: 1rem;
+    }
+
+    .nav-links {
+        gap: 5px;
+    }
+
+    .nav-link {
+        font-size: 0.7rem;
+    }
+
+    .favicon {
+        width: 24px;
+        height: 24px;
+    }
+
+    .curved-box {
+        padding: 15px;
+    }
+
+    .nav-link {
+        font-size: 0.8rem;
+        padding: 5px 10px;
+    }
+}

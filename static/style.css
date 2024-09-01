@@ -1,0 +1,254 @@
+html, body {
+    height: 100%;
+    margin: 0;
+    font-family: Arial, sans-serif;
+    background: #c0ecff;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    color: #000;
+}
+
+/* Header */
+.header-bar {
+    position: relative;
+    top: 20px;
+    left: 50%;
+    transform: translateX(-50%);
+    background: rgba(255, 255, 255, 1);
+    backdrop-filter: blur(8px);
+    padding: 10px 20px;
+    z-index: 1000;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.18);
+    border-radius: 40px;
+    width: 70%;
+    max-width: 1200px;
+    box-sizing: border-box;
+    box-shadow: 0 8px 8px rgba(8, 53, 255, 0.889);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.logo {
+    font-size: 1.7rem;
+    font-weight: bold;
+    color: #00f;
+    display: flex;
+    align-items: center;
+    font-family: "Playfair Display", serif;
+}
+
+.favicon {
+    width: 32px;
+    height: 32px;
+    margin-right: 10px;
+    vertical-align: middle;
+}
+
+.nav-links {
+    display: flex;
+    gap: 15px;
+    flex-wrap: wrap;
+    font-family: "DM Serif Display", serif;
+}
+
+.nav-link {
+    color: #000;
+    font-weight: bold;
+    text-decoration: none;
+    font-size: 1.3rem;
+    position: relative;
+    padding: 8px 16px;
+    border-radius: 20px;
+    transition: all 0.1s ease;
+}
+
+.nav-link:hover {
+    color: #00f;
+    background-color: rgb(255, 255, 255);
+    border: 2px solid #00f;
+    box-shadow: 0 4px 8px rgba(0, 0, 255, 0.5);
+}
+
+/* Main Content */
+h1.display-4 {
+    font-size: 6.5rem;
+    font-weight: bold;
+    margin-bottom: 20px;
+    font-family: "Playfair Display", serif;
+    color: rgba(8, 53, 255, 0.889);
+    text-shadow: 2px 6px 4px rgba(255, 255, 255, 0.919);
+}
+
+p.lead {
+    font-size: 1.25rem;
+    margin-bottom: 30px;
+    font-family: "DM Serif Display", serif;
+}
+
+main {
+    min-height: calc(100vh - 110px);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    margin-top: 20px;
+}
+
+/* Spline Viewer */
+spline-viewer {
+    width: 100%;
+    height: 500px;
+    margin-top: 20px;
+    background-color: transparent;
+}
+
+/* Box Buttons */
+.box-buttons-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 20px;
+    margin-top: 40px;
+}
+
+.box-button {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 170px;
+    height: 50px;
+    color: #00f;
+    background-color: #fff;
+    box-shadow: 0 8px 8px rgba(0, 0, 255, 0.5);
+    border-radius: 30px;
+    font-weight: bold;
+    font-size: 1rem;
+    text-align: center;
+    text-decoration: none;
+    transition: all 0.1s ease;
+    font-family: "DM Serif Display", serif;
+}
+
+.box-button:hover {
+    color: #00f;
+    background-color: rgb(255, 255, 255);
+    border: 2px solid #00f;
+    transform: translateY(1%);
+}
+
+/* Footer */
+footer p {
+    margin: 0;
+    font-size: 0.9rem;
+    font-family: "DM Serif Display", serif;
+}
+
+/* Input Box */
+.form-control {
+    border-radius: 25px;
+    box-shadow: 0 8px 8px rgba(0, 0, 255, 0.5);
+    transition: box-shadow 0.3s ease;
+}
+
+.form-control:focus {
+    box-shadow: none;
+}
+
+/* Media Queries */
+@media (max-width: 768px) {
+    .header-bar {
+        width: 85%;
+        padding: 8px 16px;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .logo {
+        font-size: 1.2rem;
+    }
+
+    .nav-link {
+        font-size: 0.9rem;
+        padding: 6px 12px;
+    }
+
+    .box-button {
+        width: 130px;
+        height: 45px;
+        font-size: 0.9rem;
+    }
+
+    spline-viewer {
+        height: 450px;
+    }
+
+    h1.display-4 {
+        font-size: 2.5rem;
+    }
+
+    p.lead {
+        font-size: 1rem;
+    }
+}
+
+@media (max-width: 576px) {
+    .header-bar {
+        width: 90%;
+        padding: 6px 12px;
+    }
+
+    .logo {
+        font-size: 1rem;
+    }
+
+    .nav-link {
+        font-size: 0.8rem;
+        padding: 5px 10px;
+    }
+
+    .box-button {
+        width: 120px;
+        height: 40px;
+        font-size: 0.8rem;
+    }
+
+    spline-viewer {
+        height: 400px;
+    }
+
+    h1.display-4 {
+        font-size: 2rem;
+    }
+
+    p.lead {
+        font-size: 0.8rem;
+    }
+}
+.form-control::placeholder {
+    font-family: "DM Serif Display", sans-serif; /* Set the placeholder font */
+}
+/* Button styling */
+.btn {
+    display: flex;
+    align-items: center; /* Center icon and text vertically */
+    gap: 5px; /* Adjust space between icon and text */
+}
+
+/* Icon styling */
+.material-symbols-outlined {
+    font-size: 1.2rem; /* Adjust size as needed */
+    vertical-align: middle;
+}
+
+/* Adjusted CSS for the button spacing */
+.container.mt-5.d-flex.justify-content-center {
+    align-items: center;
+}
+
+.container.mt-5.d-flex.justify-content-center .form-control {
+    margin-right: 10px; /* Increase the gap between the input and button */
+}
+
+.container.mt-5.d-flex.justify-content-center .btn {
+    margin-left: 10px; /* Ensure there's additional spacing if needed */
+}

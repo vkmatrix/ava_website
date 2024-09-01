@@ -1,0 +1,227 @@
+@import url('https://fonts.googleapis.com/css2?family=DM+Serif+Display:ital@0;1&display=swap');
+
+html, body {
+    height: 100%;
+    margin: 0;
+    font-family: Arial, sans-serif;
+    background: #c0ecff;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    color: #000;
+}
+
+/* Header Bar Styles */
+.header-bar {
+    position: relative;
+    top: 20px;
+    left: 50%;
+    transform: translateX(-50%);
+    background: rgba(255, 255, 255, 1);
+    backdrop-filter: blur(8px);
+    padding: 10px 20px;
+    z-index: 1000;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.18);
+    border-radius: 40px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 70%;
+    max-width: 1200px;
+    box-sizing: border-box;
+    box-shadow: 0 8px 8px rgba(8, 53, 255, 0.889); /* Subtle shadow for depth */
+    margin-bottom: 50px; /* Added margin to increase space */
+}
+
+/* Logo Styles */
+.logo {
+    font-size: 1.7rem;
+    font-weight: bold;
+    color: #00f;
+    display: flex;
+    align-items: center;
+    font-family: "Playfair Display", serif;
+}
+
+.favicon {
+    width: 32px;
+    height: 32px;
+    margin-right: 10px;
+    vertical-align: middle;
+}
+
+/* Navigation Links Styles */
+.nav-links {
+    display: flex;
+    gap: 15px;
+    flex-wrap: wrap;
+    font-family: "DM Serif Display", serif;
+}
+
+.nav-link {
+    color: #000;
+    font-weight: bold;
+    text-decoration: none;
+    font-size: 1.25rem;
+    position: relative;
+    padding: 8px 16px;
+    border-radius: 20px;
+    transition: all 0.1s ease;
+}
+
+.nav-link:hover {
+    color: #00f;
+    background-color: rgb(255, 255, 255);
+    border: 2px solid #00f;
+    box-shadow: 0 4px 8px rgba(0, 0, 255, 0.5);
+}
+
+/* Responsive styles */
+@media (max-width: 768px) {
+    .header-bar {
+        width: 85%;
+        padding: 8px 16px;
+        flex-direction: column;
+        align-items: flex-start;
+        text-align: center;
+    }
+
+    .nav-link {
+        font-size: 0.9rem;
+        padding: 6px 12px;
+    }
+}
+
+@media (max-width: 576px) {
+    .logo {
+        font-size: 1rem;
+    }
+
+    .nav-links {
+        gap: 5px;
+    }
+
+    .nav-link {
+        font-size: 0.7rem;
+    }
+
+    .favicon {
+        width: 24px;
+        height: 24px;
+    }
+
+    .nav-link {
+        font-size: 0.8rem;
+        padding: 5px 10px;
+    }
+}
+
+/* Curved Box Styles */
+.curved-box {
+    position: relative;
+    margin-top: 50px; /* Increased space between header bar and curved box */
+    margin-bottom: 50px; /* Increased space below the curved box */
+    left: 50%;
+    transform: translateX(-50%);
+    background: rgba(255, 255, 255, 1);
+    backdrop-filter: blur(8px);
+    padding: 30px; /* Increased padding for more spacing */
+    z-index: 1000;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.18);
+    border-radius: 40px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 60%;
+    max-width: 1200px;
+    box-sizing: border-box;
+    box-shadow: 0 8px 8px rgba(8, 53, 255, 0.889); /* Subtle shadow for depth */
+}
+
+/* Form Title Styles */
+.form-title {
+    font-family: "DM Serif Display", serif;
+    color: #000;
+    font-size: 1.5rem;
+    font-weight: bold;
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+/* Form Styles */
+.patient-form .form-control {
+    border-radius: 30px;
+    margin-bottom: 15px;
+    font-family: "DM Serif Display", serif;
+}
+
+.patient-form .btn {
+    background-color: #00f;
+    color: white;
+    border: none;
+    border-radius: 30px;
+    padding: 10px 30px; /* Adjusted padding for a wider button */
+    transition: all 0.3s ease;
+    margin-top: 20px;
+    font-family: "DM Serif Display", serif;
+}
+
+.patient-form .btn:hover {
+    background-color: #fff;
+    color: #00f;
+    border: 2px solid #00f;
+    box-shadow: 0 4px 8px rgba(0, 0, 255, 0.5);
+}
+
+/* Output Section Styles */
+.output-title {
+    font-family: "DM Serif Display", serif;
+    color: #000;
+    font-size: 1.2rem;
+    font-weight: bold;
+    text-align: left;
+    margin-top: 30px;
+    margin-bottom: 10px;
+}
+
+/* Output Textarea Styles */
+#output {
+    border-radius: 20px;
+    border: 1px solid #00f;
+    box-shadow: 0 4px 8px rgba(0, 0, 255, 0.5);
+    font-family: "DM Serif Display", serif;
+    height: 150px; /* Increased height for a longer output box */
+}
+
+/* Responsive styles */
+@media (max-width: 768px) {
+    .curved-box {
+        width: 85%;
+        padding: 20px;
+    }
+
+    .form-title {
+        font-size: 1.3rem;
+    }
+
+    #output {
+        font-size: 0.9rem;
+    }
+}
+
+@media (max-width: 576px) {
+    .curved-box {
+        width: 90%;
+    }
+
+    .form-title {
+        font-size: 1rem;
+    }
+
+    #output {
+        font-size: 0.8rem;
+        height: 120px; /* Adjusted height for smaller screens */
+    }
+}
+.col-md-12{
+    font-family: "DM Serif Display", serif;
+}
